@@ -1,0 +1,49 @@
+{
+  "name": "agent-brief",
+  "version": "1.0.0",
+  "description": "High-density, self-contained visual HTML brief compiler and Agent Skill for AI coding assistants.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "agent-brief": "bin/brief.js",
+    "brief": "bin/brief.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "examples",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.js",
+    "check": "node bin/brief.js check examples/oauth2.md",
+    "render:example": "node bin/brief.js render examples/oauth2.md -o dist/oauth2.html"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "skill",
+    "html",
+    "diagram",
+    "markdown",
+    "visualization",
+    "flowchart",
+    "sequence-diagram",
+    "ste100"
+  ],
+  "author": "HackSing",
+  "license": "MIT",
+  "dependencies": {
+    "@dagrejs/dagre": "^3.1.1",
+    "marked": "^18.0.14"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
